@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>com.yuxuan66.fastTransform</id>
+    <name>FastTransform</name>
+    <version>1.0.2</version>
+    <vendor email="1718018032@qq.com" url="https://www.yuxuan66.com" >Sir丶雨轩</vendor>
+
+    <description>Convenient and fast text conversion from one key to uppercase, lowercase, hump, underline, etc., giving you unparalleled development efficiency experience</description>
+    <idea-version since-build="173.0"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+        <group id="TransformActionGroup"/>
+        <action id="TransformAction" class="com.yuxuan66.ehi.idea.plugin.fasttransform.action.TransformAction"
+                text="Transform">
+            <add-to-group group-id="EditMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt W"/>
+        </action>
+    </actions>
+
+</idea-plugin>
