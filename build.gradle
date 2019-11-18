@@ -25,7 +25,8 @@ repositories {
 }
 
 dependencies {
-    compile group: 'cn.hutool', name: 'hutool-core', version: '5.0.5'
+    compile group: 'cn.hutool', name: 'hutool-all', version: '5.0.5'
+
 
 }
 

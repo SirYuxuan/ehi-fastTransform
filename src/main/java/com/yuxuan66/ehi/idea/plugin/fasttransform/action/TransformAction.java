@@ -1,4 +1,3 @@
-package com.yuxuan66.ehi.idea.plugin.fasttransform.action;
 /**
  * Copyright (c) [2019] [Sir丶雨轩]
  * [fastTransform] is licensed under the Mulan PSL v1.
@@ -10,6 +9,7 @@ package com.yuxuan66.ehi.idea.plugin.fasttransform.action;
  * PURPOSE.
  * See the Mulan PSL v1 for more details.
  */
+package com.yuxuan66.ehi.idea.plugin.fasttransform.action;
 
 import cn.hutool.core.util.StrUtil;
 import com.intellij.openapi.actionSystem.*;
@@ -19,6 +19,7 @@ import com.intellij.openapi.editor.SelectionModel;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.openapi.ui.popup.ListPopup;
+import com.yuxuan66.ehi.idea.plugin.fasttransform.utils.TranslateUtil;
 import org.apache.http.util.TextUtils;
 
 /**
@@ -42,11 +43,22 @@ public class TransformAction extends AnAction {
         }
         int start = model.getSelectionStart();
         int end = model.getSelectionEnd();
+        actionGroup.add(new AnAction("ToEnglish") {
+            @Override
+            public void actionPerformed(AnActionEvent e) {
+                WriteCommandAction.runWriteCommandAction(project, () -> {
+                            String result = StrUtil.toCamelCase(TranslateUtil.toEn(selectedText).replaceAll(" ","_"));
+                            result = StrUtil.lowerFirst(result);
+                            mEditor.getDocument().replaceString(start, end, result);
+                        }
+                );
+            }
+        });
         actionGroup.add(new AnAction("ToHump") {
             @Override
             public void actionPerformed(AnActionEvent e) {
                 WriteCommandAction.runWriteCommandAction(project, () -> {
-                    mEditor.getDocument().replaceString(start,end, StrUtil.toCamelCase(selectedText));
+                            mEditor.getDocument().replaceString(start, end, StrUtil.toCamelCase(selectedText));
                         }
                 );
             }
@@ -55,7 +67,7 @@ public class TransformAction extends AnAction {
             @Override
             public void actionPerformed(AnActionEvent e) {
                 WriteCommandAction.runWriteCommandAction(project, () -> {
-                    mEditor.getDocument().replaceString(start,end,StrUtil.toUnderlineCase(selectedText));
+                            mEditor.getDocument().replaceString(start, end, StrUtil.toUnderlineCase(selectedText));
                         }
                 );
             }
@@ -64,7 +76,7 @@ public class TransformAction extends AnAction {
             @Override
             public void actionPerformed(AnActionEvent e) {
                 WriteCommandAction.runWriteCommandAction(project, () -> {
-                    mEditor.getDocument().replaceString(start,end,selectedText.toUpperCase());
+                            mEditor.getDocument().replaceString(start, end, selectedText.toUpperCase());
                         }
                 );
             }
@@ -73,7 +85,7 @@ public class TransformAction extends AnAction {
             @Override
             public void actionPerformed(AnActionEvent e) {
                 WriteCommandAction.runWriteCommandAction(project, () -> {
-                    mEditor.getDocument().replaceString(start,end,selectedText.toLowerCase());
+                            mEditor.getDocument().replaceString(start, end, selectedText.toLowerCase());
                         }
                 );
             }
