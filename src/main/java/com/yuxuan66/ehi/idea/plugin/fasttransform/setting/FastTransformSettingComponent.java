@@ -33,10 +33,22 @@ public class FastTransformSettingComponent implements SearchableConfigurable {
         return "FastTransform";
     }
 
+    @Nullable
+    @Override
+    public Runnable enableSearch(String option) {
+        return null;
+    }
+
     @Nls(capitalization = Nls.Capitalization.Title)
     @Override
     public String getDisplayName() {
         return "FastTransform";
+    }
+
+    @Nullable
+    @Override
+    public String getHelpTopic() {
+        return null;
     }
 
     @Nullable
@@ -61,5 +73,10 @@ public class FastTransformSettingComponent implements SearchableConfigurable {
     @Override
     public void reset() {
         setting.getTextField1().setText(fastTransformState.getShortcutKeys());
+    }
+
+    @Override
+    public void disposeUIResources() {
+
     }
 }
