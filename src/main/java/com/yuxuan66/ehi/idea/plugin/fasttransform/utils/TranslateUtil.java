@@ -12,15 +12,11 @@
  */
 package com.yuxuan66.ehi.idea.plugin.fasttransform.utils;
 
-import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
-import cn.hutool.core.util.URLUtil;
 import cn.hutool.crypto.SecureUtil;
 import cn.hutool.http.HttpUtil;
-import cn.hutool.json.JSON;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
-import com.github.rjeschke.txtmark.Run;
 
 import java.util.HashMap;
 import java.util.Map;
