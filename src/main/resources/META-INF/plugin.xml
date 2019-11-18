@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.yuxuan66.fastTransform</id>
     <name>FastTransform</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <vendor email="1718018032@qq.com" url="https://www.yuxuan66.com" >Sir丶雨轩</vendor>
 
     <description>Convenient and fast text conversion from one key to uppercase, lowercase, hump, underline, etc., giving you unparalleled development efficiency experience</description>
