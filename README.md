@@ -51,7 +51,7 @@ Ehi-FastTransform 目前提供了如下功能
 - 2.新增快捷键 alt + shift + e 快速智能推荐
 - 3.系统设置中,可设置智能推荐最大数量
 ## 项目依赖
-- [hutool-all](https://gitee.com/loolly/hutool) 使用定时任务,Http等工具
+- [hutool-all](https://gitee.com/loolly/hutool) 
 ## 添砖加瓦
 
 ### 提供bug反馈或建议
