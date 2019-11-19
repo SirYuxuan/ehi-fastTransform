@@ -10,7 +10,7 @@ apply plugin: 'idea'
 apply plugin: 'org.jetbrains.intellij'
 
 group 'com.yuxuan66'
-version '1.0.3'
+version '1.0.4'
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
@@ -24,10 +24,8 @@ dependencies {
 
 intellij {
     pluginName 'FastTransform'
-    updateSinceUntilBuild false
-    // 沙箱目录位置，用于保存IDEA的设置，默认在build文件下面，防止clean，放在根目录下。
     sandboxDirectory = "${rootProject.rootDir}/idea-sandbox"
-    version '162.1628.40'
+    version '2018.1.5'
     publishPlugin {
         token pushToken
     }
