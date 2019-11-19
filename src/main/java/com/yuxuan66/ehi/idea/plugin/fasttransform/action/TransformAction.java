@@ -19,8 +19,10 @@ import com.intellij.openapi.editor.SelectionModel;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.openapi.ui.popup.ListPopup;
+import com.yuxuan66.ehi.idea.plugin.fasttransform.utils.CodeIfUtil;
 import com.yuxuan66.ehi.idea.plugin.fasttransform.utils.TranslateUtil;
 import org.apache.http.util.TextUtils;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Sir丶雨轩

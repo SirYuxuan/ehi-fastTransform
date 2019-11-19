@@ -1,4 +1,3 @@
-
 /**
  * Copyright (c) [2019] [Sir丶雨轩]
  * [fastTransform] is licensed under the Mulan PSL v1.

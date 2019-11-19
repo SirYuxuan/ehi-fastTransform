@@ -1,4 +1,3 @@
-
 /**
  * Copyright (c) [2019] [Sir丶雨轩]
  * [fastTransform] is licensed under the Mulan PSL v1.
@@ -12,6 +11,7 @@
  */
 package com.yuxuan66.ehi.idea.plugin.fasttransform.setting;
 
+import cn.hutool.core.convert.Convert;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.SearchableConfigurable;
 import org.jetbrains.annotations.Nls;
@@ -21,8 +21,8 @@ import org.jetbrains.annotations.Nullable;
 import javax.swing.*;
 
 public class FastTransformSettingComponent implements SearchableConfigurable {
-    //快捷键
-    public String shortcutKeys;
+    //智能推荐最大数量
+    public int maxCount;
     private Setting setting;
     //持久化保存
     private FastTransformState fastTransformState = FastTransformState.getInstance();
@@ -33,11 +33,7 @@ public class FastTransformSettingComponent implements SearchableConfigurable {
         return "FastTransform";
     }
 
-    @Nullable
-    @Override
-    public Runnable enableSearch(String option) {
-        return null;
-    }
+
 
     @Nls(capitalization = Nls.Capitalization.Title)
     @Override
@@ -48,8 +44,9 @@ public class FastTransformSettingComponent implements SearchableConfigurable {
     @Nullable
     @Override
     public String getHelpTopic() {
-        return null;
+        return "Yuxuan";
     }
+
 
     @Nullable
     @Override
@@ -62,21 +59,20 @@ public class FastTransformSettingComponent implements SearchableConfigurable {
 
     @Override
     public boolean isModified() {
-        return setting != null && !setting.getTextField1().getText().equals(FastTransformState.getInstance().getShortcutKeys());
+        return setting != null && !Convert.toInt(setting.getTextField1().getText(),5).equals(FastTransformState.getInstance().getMaxCount());
     }
 
     @Override
     public void apply() throws ConfigurationException {
-        fastTransformState.setShortcutKeys(setting.getTextField1().getText());
+        fastTransformState.setMaxCount(Convert.toInt(setting.getTextField1().getText(),5));
     }
 
     @Override
     public void reset() {
-        setting.getTextField1().setText(fastTransformState.getShortcutKeys());
+        setting.getTextField1().setText(String.valueOf(fastTransformState.getMaxCount()));
     }
 
-    @Override
-    public void disposeUIResources() {
 
-    }
+
+
 }

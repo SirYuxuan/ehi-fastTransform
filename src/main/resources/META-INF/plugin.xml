@@ -1,37 +1,57 @@
 <idea-plugin>
     <id>com.yuxuan66.fastTransform</id>
     <name>FastTransform</name>
-    <version>1.0.3</version>
-    <vendor email="1718018032@qq.com" url="https://www.yuxuan66.com" >Sir丶雨轩</vendor>
+    <version>1.0.4</version>
+    <vendor email="1718018032@qq.com" url="https://www.yuxuan66.com">Sir丶雨轩</vendor>
 
     <description><![CDATA[
         <tag>FastTransform,Fast,Fast Transform,Transform,code generate,code tools</tag>
         Convenient and fast text conversion from one key to uppercase, lowercase, hump, underline, etc., giving you unparalleled development efficiency experience </br>
+        <p>issues: <a href="https://gitee.com/siryuxuan/ehi-fastTransform/issues">issues</a></p>
         <h3>中文:</h3>
-        从一键到大写、小写、驼峰、下划线、到英文 等方便快捷的文本转换，给您无与伦比的开发效率体验 </br>
-        快捷键: alt + shift + w </br>
+        从一键到大写、小写、驼峰、下划线、到英文 等方便快捷的文本转换，给您无与伦比的开发效率体验,变量命名自动推荐</br>
+        <ul>
+            <li>快捷键:</li>
+            <li>快速转换: alt + shift + w</li>
+            <li>智能推荐: alt + shift + e</li>
+        </ul>
         <p>问题反馈: <a href="https://gitee.com/siryuxuan/ehi-fastTransform/issues">issues</a></p>
         <p>QQ群:875477818</p>
         <p>More <a href="https://gitee.com/siryuxuan/ehi-fastTransform">Help Info</a>.</p>
         <p>Blog <a href="https://www.yuxuan66.com">雨轩博客</a>.</p>
     ]]>
-
-
     </description>
+    <change-notes>
+        <![CDATA[
+            <h3>1.0.4</h3>
+            <ul>
+                <li>1.添加变量名智能推荐功能</li>
+                <li>2.新增快捷键 alt + shift + e 快速智能推荐</li>
+                <li>3.系统设置中,可设置智能推荐最大数量</li>
+            </ul>
+        ]]>
+    </change-notes>
     <idea-version since-build="173.0"/>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- 暂时关闭设置功能 -->
-       <!-- <applicationConfigurable instance="com.yuxuan66.ehi.idea.plugin.fasttransform.setting.FastTransformSettingComponent"/>
-        <applicationService serviceInterface="com.yuxuan66.ehi.idea.plugin.fasttransform.setting.FastTransformState" serviceImplementation="com.yuxuan66.ehi.idea.plugin.fasttransform.setting.FastTransformState"/>-->extensions
+
+        <applicationConfigurable
+                instance="com.yuxuan66.ehi.idea.plugin.fasttransform.setting.FastTransformSettingComponent"/>
+        <applicationService serviceInterface="com.yuxuan66.ehi.idea.plugin.fasttransform.setting.FastTransformState"
+                            serviceImplementation="com.yuxuan66.ehi.idea.plugin.fasttransform.setting.FastTransformState"/>
     </extensions>
 
     <actions>
         <group id="TransformActionGroup"/>
+        <group id="IntelligentRecommendationGroup"/>
         <action id="TransformAction" class="com.yuxuan66.ehi.idea.plugin.fasttransform.action.TransformAction"
                 text="Transform">
             <add-to-group group-id="EditMenu" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="shift alt W"/>
+        </action> <action id="IntelligentRecommendation" class="com.yuxuan66.ehi.idea.plugin.fasttransform.action.IntelligentRecommendation"
+                text="Transform">
+            <add-to-group group-id="EditMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt E"/>
         </action>
     </actions>
 
