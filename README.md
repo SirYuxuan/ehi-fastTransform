@@ -8,16 +8,16 @@
 </p>
 <p align="center">
 	<a target="_blank" href="https://plugins.jetbrains.com/plugin/13318-fasttransform/">
-		<img src="https://img.shields.io/jetbrains/plugin/v/com.yuxuan66.fastTransform?style=flat-square" />
-	</a>
-	<a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0.html">
-		<img src="https://img.shields.io/:license-apache-blue.svg" />
+		<img src="https://img.shields.io/jetbrains/plugin/v/com.yuxuan66.fastTransform?style=flat" />
 	</a>
 	<a target="_blank" href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">
 		<img src="https://img.shields.io/badge/JDK-1.8+-green.svg"/> 
 	</a>
 	<a target="_blank" href='https://gitee.com/siryuxuan/ehi-fastTransform/stargazers'>
 	<img src='https://gitee.com/siryuxuan/ehi-fastTransform/badge/star.svg?theme=dark' alt='star'/>
+	</a>
+	<a target="_blank" href='https://github.com/SirYuxuan/ehi-fastTransform/stargazers'>
+	<img src='https://img.shields.io/github/stars/SirYuxuan/ehi-fastTransform' alt='star'/>
 	</a>
 
 </p>
