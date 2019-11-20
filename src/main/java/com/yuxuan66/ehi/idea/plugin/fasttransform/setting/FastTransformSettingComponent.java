@@ -33,6 +33,11 @@ public class FastTransformSettingComponent implements SearchableConfigurable {
         return "FastTransform";
     }
 
+    @Nullable
+    @Override
+    public Runnable enableSearch(String option) {
+        return () -> System.out.println(option);
+    }
 
 
     @Nls(capitalization = Nls.Capitalization.Title)
@@ -72,7 +77,10 @@ public class FastTransformSettingComponent implements SearchableConfigurable {
         setting.getTextField1().setText(String.valueOf(fastTransformState.getMaxCount()));
     }
 
+    @Override
+    public void disposeUIResources() {
 
+    }
 
 
 }

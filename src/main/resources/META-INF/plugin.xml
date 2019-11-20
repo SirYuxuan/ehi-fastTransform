@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.yuxuan66.fastTransform</id>
     <name>FastTransform</name>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <vendor email="1718018032@qq.com" url="https://www.yuxuan66.com">Sir丶雨轩</vendor>
 
     <description><![CDATA[
@@ -23,11 +23,9 @@
     </description>
     <change-notes>
         <![CDATA[
-            <h3>1.0.4</h3>
+            <h3>1.0.5</h3>
             <ul>
-                <li>1.添加变量名智能推荐功能</li>
-                <li>2.新增快捷键 alt + shift + e 快速智能推荐</li>
-                <li>3.系统设置中,可设置智能推荐最大数量</li>
+                <li>1.兼容Idea高版本</li>
             </ul>
         ]]>
     </change-notes>

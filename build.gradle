@@ -10,7 +10,7 @@ apply plugin: 'idea'
 apply plugin: 'org.jetbrains.intellij'
 
 group 'com.yuxuan66'
-version '1.0.4'
+version '1.0.5'
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
@@ -25,9 +25,10 @@ dependencies {
 intellij {
     pluginName 'FastTransform'
     sandboxDirectory = "${rootProject.rootDir}/idea-sandbox"
-    version '2018.1.5'
+    updateSinceUntilBuild false
+    version '162.1628.40'
     publishPlugin {
-        token pushToken
+        token ''
     }
 }
 
