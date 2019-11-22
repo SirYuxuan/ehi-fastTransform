@@ -39,6 +39,7 @@ Ehi-FastTransform 目前提供了如下功能
 ### 快捷键
 - 一键转换 alt + shift + w
 - 智能变量名推荐 alt + shift + e
+![show](https://images.gitee.com/uploads/images/2019/1122/170824_ba810df0_461804.gif "show1.gif")
 ## 安装
 在IntelliJ IDEA中依次打开
 
