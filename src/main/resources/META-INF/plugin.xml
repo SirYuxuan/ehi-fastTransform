@@ -25,13 +25,13 @@
         <![CDATA[
             <h3>1.0.5</h3>
             <ul>
-                <li>1.兼容Idea高版本</li>
+                <li>1.Compatible with higher version of idea</li>
             </ul>
             <h3>1.0.4</h3>
             <ul>
-                <li>1.添加变量名智能推荐功能</li>
-                <li>2.新增快捷键 alt + shift + e 快速智能推荐</li>
-                <li>3.系统设置中,可设置智能推荐最大数量</li>
+                <li>1.Add variable name intelligent recommendation function</li>
+                <li>2.New shortcut key Alt + Shift + e quick intelligent recommendation</li>
+                <li>3.In system settings, the maximum number of intelligent recommendations can be set</li>
             </ul>
         ]]>
     </change-notes>
