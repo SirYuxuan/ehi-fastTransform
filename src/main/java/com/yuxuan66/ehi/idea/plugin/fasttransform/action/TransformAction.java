@@ -83,7 +83,7 @@ public class TransformAction extends AnAction {
                 );
             }
         });
-        actionGroup.add(new AnAction("ToLoseCase") {
+        actionGroup.add(new AnAction("ToLowerCase") {
             @Override
             public void actionPerformed(AnActionEvent e) {
                 WriteCommandAction.runWriteCommandAction(project, () -> {
