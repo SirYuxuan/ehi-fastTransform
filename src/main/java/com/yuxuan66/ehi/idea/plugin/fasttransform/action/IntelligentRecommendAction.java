@@ -1,6 +1,5 @@
 package com.yuxuan66.ehi.idea.plugin.fasttransform.action;
 
-import cn.hutool.core.util.StrUtil;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Editor;
@@ -13,7 +12,7 @@ import com.yuxuan66.ehi.idea.plugin.fasttransform.utils.TranslateUtil;
 import org.apache.http.util.TextUtils;
 import org.jetbrains.annotations.NotNull;
 
-public class IntelligentRecommendation extends AnAction {
+public class IntelligentRecommendAction extends AnAction {
     @Override
     public void actionPerformed(AnActionEvent e) {
         DefaultActionGroup intelligentRecommendationGroup = (DefaultActionGroup) ActionManager.getInstance().getAction("IntelligentRecommendationGroup");

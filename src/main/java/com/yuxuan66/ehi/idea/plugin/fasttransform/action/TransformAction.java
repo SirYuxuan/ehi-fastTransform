@@ -29,6 +29,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class TransformAction extends AnAction {
 
+
     @Override
     public void actionPerformed(AnActionEvent e) {
         DefaultActionGroup actionGroup = (DefaultActionGroup) ActionManager.getInstance().getAction("TransformActionGroup");
@@ -48,12 +49,7 @@ public class TransformAction extends AnAction {
         actionGroup.add(new AnAction("ToEnglish") {
             @Override
             public void actionPerformed(AnActionEvent e) {
-                WriteCommandAction.runWriteCommandAction(project, () -> {
-                            String result = StrUtil.toCamelCase(TranslateUtil.toEn(selectedText).replaceAll(" ","_"));
-                            result = StrUtil.lowerFirst(result);
-                            mEditor.getDocument().replaceString(start, end, result);
-                        }
-                );
+
             }
         });
         actionGroup.add(new AnAction("ToHump") {

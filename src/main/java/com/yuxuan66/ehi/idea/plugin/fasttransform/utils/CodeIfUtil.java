@@ -38,26 +38,29 @@ public class CodeIfUtil {
      */
     public static List<String> intelligentRecommendation(String q) {
         List<String> result = new ArrayList<>();
-        int maxCount = FastTransformState.getInstance().getMaxCount();
-        String jsonStr = HttpUtil.get(API_PATH + URLUtil.encode(q));
-        JSONObject jsonObject = JSONUtil.parseObj(jsonStr);
-        JSONArray jsonArray = jsonObject.getJSONArray("web");
-        if(!jsonArray.isEmpty()){
-            for (int i = 0; i < jsonArray.size(); i++) {
-                JSONObject tmp = jsonArray.getJSONObject(i);
-                JSONArray resultArr = tmp.getJSONArray("value");
-                for (int i1 = 0; i1 < resultArr.size(); i1++) {
-                    if(result.size() >= maxCount){
-                        return result;
+        try {
+            int maxCount = FastTransformState.getInstance().getMaxCount();
+            String jsonStr = HttpUtil.get(API_PATH + URLUtil.encode(q));
+            JSONObject jsonObject = JSONUtil.parseObj(jsonStr);
+            JSONArray jsonArray = jsonObject.getJSONArray("web");
+            if (!jsonArray.isEmpty()) {
+                for (int i = 0; i < jsonArray.size(); i++) {
+                    JSONObject tmp = jsonArray.getJSONObject(i);
+                    JSONArray resultArr = tmp.getJSONArray("value");
+                    for (int i1 = 0; i1 < resultArr.size(); i1++) {
+                        if (result.size() >= maxCount) {
+                            return result;
+                        }
+                        result.add(StrUtil.lowerFirst(StrUtil.toCamelCase(resultArr.getStr(i1).replaceAll(" ", "_"))));
                     }
-                    result.add(StrUtil.lowerFirst(StrUtil.toCamelCase(resultArr.getStr(i1).replaceAll(" ","_"))));
                 }
             }
+            return result;
+        } catch (Exception e) {
+
         }
         return result;
+
     }
 
-    public static void main(String[] args) {
-        intelligentRecommendation("测试").forEach(System.out::println);
-    }
 }

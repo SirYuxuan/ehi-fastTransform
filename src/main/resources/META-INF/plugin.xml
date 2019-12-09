@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.yuxuan66.fastTransform</id>
     <name>FastTransform</name>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <vendor email="1718018032@qq.com" url="https://www.yuxuan66.com">Sir丶雨轩</vendor>
 
     <description><![CDATA[
@@ -23,6 +23,7 @@
     </description>
     <change-notes>
         <![CDATA[
+
             <h3>1.0.5</h3>
             <ul>
                 <li>1.Compatible with higher version of idea</li>
@@ -51,8 +52,8 @@
         <action id="TransformAction" class="com.yuxuan66.ehi.idea.plugin.fasttransform.action.TransformAction"
                 text="Transform">
             <add-to-group group-id="EditMenu" anchor="first"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="shift alt W"/>
-        </action> <action id="IntelligentRecommendation" class="com.yuxuan66.ehi.idea.plugin.fasttransform.action.IntelligentRecommendation"
+            <keyboard-shortcut keymap="$defalut" first-keystroke="shift alt W"/>
+        </action> <action id="IntelligentRecommendation" class="com.yuxuan66.ehi.idea.plugin.fasttransform.action.IntelligentRecommendAction"
                 text="Transform">
             <add-to-group group-id="EditMenu" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="shift alt E"/>
