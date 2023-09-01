@@ -1,7 +1,5 @@
 <p align="center">
-    <a href="https://www.yuxuan66.com" target="_blank">
-        <img src="http://cdn.base.yuxuan66.com/yuxuan/ehi/logo/Ehi-fastTransform.png" width="400px">
-    </a>
+ 
 </p>
 <p align="center">
 	<strong>Ehi-FastTransform 是基于IntelliJ IDEA开发的代码生成插件</strong>
